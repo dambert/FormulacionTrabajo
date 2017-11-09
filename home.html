@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- SEO -->
+        <meta property="og:title" content="[[*menutitle:default=`menutitle`]]" > 
+        <meta property="og:type" content="website" > 
+        <meta property="og:url" content="[[++site_url]]" > 
+        <meta property="og:site_name" content="[[++site_name]] " > 
+        <meta property="og:image" content="[[++site_url]]" >
+        <meta property="og:description" content="[[*meta_description]]" > 
+
+        
+        <!--Metatags-->
+        <meta name="description" content="[[*meta_description]]">
+        <meta name="author" content="[[#8.tv.copyright_general]]" />
+
+        <meta name="google-site-verification" content="[[#8.tv.google_site_verification]]">
+
+            <!-- google_analytics -->
+
+        <!-- fin seo -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/menu.css">
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>        
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="css/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+
+
+    <style>
+       #map {
+        height: 300px;
+        width: 100%;
+       }
+    </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">              
+            <header >
+            </header>  
+            <div class="contenido">
+                <div class="container">
+                <form action="" method="POST" role="form">
+                    <div class="" style="margin-top:10px;">
+                        <div class="pull-left">
+                            <a href="javascript:history.back();"><i class="glyphicon glyphicon-circle-arrow-left"></i></a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="perfil.html" class="btn btn-default">Perfil</a>
+                        </div>
+                    </div>
+                    <br/>
+                    <legend class="text-center"><strong>TEC APP</strong></legend>                
+                    <div id="map"></div>
+                    <a href="buscar.html" class="btn btn-large btn-block btn-primary">Buscar Técnicos</a>
+                </form>
+                </div>
+            </div>
+        </div>
+         <script>
+          function initMap() {
+            var uluru = {lat: -12.10387, lng: -76.963044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 16,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3qMIy5uPzwuMtFPbxaceUy3DMnznTnxI&callback=initMap">
+        </script>
+        <br/>
+
+    </body>
+</html>
