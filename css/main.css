@@ -9,7 +9,15 @@
     font-weight: normal;
     font-style: normal;
 }
+.wrapper{
+    width: 400px !important;
+    margin:0 auto;
+    background: #f6f6f6;
+}
+.container{
+    width: 100% !important;
 
+}
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon';
     speak: none;
